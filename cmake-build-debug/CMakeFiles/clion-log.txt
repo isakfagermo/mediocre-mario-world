@@ -1,0 +1,4 @@
+C:\Users\isakf\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/isakf/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/ninja/win/ninja.exe -DCMAKE_CXX_FLAGS=-IC:/dev/libs/SFML/include -DCMAKE_EXE_LINKER_FLAGS=-LC:/dev/libs/SFML/lib -G Ninja C:\Users\isakf\ikt103g22v\assignments\solutions\assignment_project
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/isakf/ikt103g22v/assignments/solutions/assignment_project/cmake-build-debug
