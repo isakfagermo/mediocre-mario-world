@@ -1,3 +1,3 @@
-C:/Users/isakf/ikt103g22v/assignments/solutions/assignment_project/cmake-build-debug/CMakeFiles/assignment_project.dir
-C:/Users/isakf/ikt103g22v/assignments/solutions/assignment_project/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/isakf/ikt103g22v/assignments/solutions/assignment_project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/isakfagermo/dev/mediocre-mario-world/cmake-build-debug/CMakeFiles/mediocre-mario-world.dir
+/Users/isakfagermo/dev/mediocre-mario-world/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/isakfagermo/dev/mediocre-mario-world/cmake-build-debug/CMakeFiles/rebuild_cache.dir

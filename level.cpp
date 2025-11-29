@@ -3,23 +3,29 @@
 //
 #include "level.h"
 #include "solid_blocks.h"
+#include "theme.h"
 
-#define CLEAR_BLOCK "Textures/Level/clear.png"
-#define DIRT_BLOCK "Textures/Level/dirt.png"
-#define GRASS_BLOCK "Textures/Level/dirt_grass.png"
-#define QUESTION_BLOCK "Textures/Level/question.png"
-#define BRICK_BLOCK "Textures/Level/brick.png"
-#define CLOUD_TOP_LEFT "Textures/Level/cloud_top_left.png"
-#define CLOUD_TOP_RIGHT "Textures/Level/cloud_top_right.png"
-#define CLOUD_BOTTOM_LEFT "Textures/Level/cloud_bottom_left.png"
-#define CLOUD_BOTTOM_RIGHT "Textures/Level/cloud_bottom_right.png"
-#define LEFT_MOUNTAIN_BLOCK "Textures/Level/mountain_left.png"
-#define RIGHT_MOUNTAIN_BLOCK "Textures/Level/mountain_right.png"
-#define BUSH_BLOCK "Textures/Level/small_bush.png"
+#pragma once
+
+#define CLEAR_BLOCK           (::assets::current().clear_block.c_str())
+#define DIRT_BLOCK            (::assets::current().dirt_block.c_str())
+#define GRASS_BLOCK           (::assets::current().grass_block.c_str())
+#define QUESTION_BLOCK        (::assets::current().question_block.c_str())
+#define BRICK_BLOCK           (::assets::current().brick_block.c_str())
+#define CLOUD_TOP_LEFT        (::assets::current().cloud_top_left.c_str())
+#define CLOUD_TOP_RIGHT       (::assets::current().cloud_top_right.c_str())
+#define CLOUD_BOTTOM_LEFT     (::assets::current().cloud_bottom_left.c_str())
+#define CLOUD_BOTTOM_RIGHT    (::assets::current().cloud_bottom_right.c_str())
+#define LEFT_MOUNTAIN_BLOCK   (::assets::current().left_mountain_block.c_str())
+#define RIGHT_MOUNTAIN_BLOCK  (::assets::current().right_mountain_block.c_str())
+#define BUSH_BLOCK            (::assets::current().bush_block.c_str())
+
 #define LEVEL_LENGTH 54
+
 
 Level::Level()
 {
+    assets::set_theme(Theme::Winter);
     spawn();
 }
 
@@ -28,15 +34,14 @@ void Level::spawn()
     setupTiles();
 }
 
-
-//Jeg tegner banen rad for rad. For å ungå error når jeg skal printe så legger jeg et lag med igjennomsiktige blokker over hele banen
-//Derfor vil ikke noen av vectorene i lista være tom.
-//Shoutout RAM-brikkan mine :)
+//Drawing the level row by row. We need to apply invisible blocks on the whole level first to avoid errors.
 
 void Level::setupTiles()
 {
+
+
     tiles.clear();
-/////////////////////////////////////   Lag 2 kommer før lag 1... Dont fix it if its not broken
+/////////////////////////////////////   Row 2 is before 1, dont fix it if its not broken
 #define ROW_TWO 192
 
     vector<Tiles *> first;
@@ -61,8 +66,6 @@ for (int i = 0; i < LEVEL_LENGTH; ++i)
 
     vector<Tiles *> three;
     three.reserve(LEVEL_LENGTH);
-
-
 
     three.push_back(new Tiles("Textures/Slott/R1-1.png", 720, ROW_THREE, true, false));
     three.push_back(new Tiles("Textures/Slott/R1-2.png", 736, ROW_THREE, true, false));
@@ -151,6 +154,7 @@ for (int i = 0; i < LEVEL_LENGTH; ++i)
         six.push_back(new Tiles(CLEAR_BLOCK, (i * 16), ROW_SIX, false, false));
     }
     tiles.push_back(six);
+
 /////////////////////////////////////
 #define ROW_SEVEN 112
 
@@ -294,7 +298,9 @@ for (int i = 0; i < LEVEL_LENGTH; ++i)
         thirteen.push_back(new Tiles(CLEAR_BLOCK, (i * 16), ROW_THIRTEEN, false, false));
     }
     tiles.push_back(thirteen);
+
 /////////////////////////////////////
+///
 #define ROW_FOURTEEN 0
 
     vector<Tiles *> fourteen;
