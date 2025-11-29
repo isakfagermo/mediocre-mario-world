@@ -1,0 +1,5 @@
+/Users/isakfagermo/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/isakfagermo/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DSFML_DIR=/opt/homebrew/opt/sfml@2/lib/cmake/SFML -G Ninja -S /Users/isakfagermo/dev/mediocre-mario-world -B /Users/isakfagermo/dev/mediocre-mario-world/cmake-build-debug
+-- Found SFML 2.6.2 in /opt/homebrew/opt/sfml@2/lib/cmake/SFML
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/isakfagermo/dev/mediocre-mario-world/cmake-build-debug

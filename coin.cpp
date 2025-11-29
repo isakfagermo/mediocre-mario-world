@@ -6,7 +6,7 @@
 
 Coin::Coin(float x, float y)
 {
-    texture.loadFromFile("C:/Users/isakf/ikt103g22v/assignments/solutions/assignment_project/Textures/Level/coin.png");
+    texture.loadFromFile("Textures/coin.png");
     sprite.setTexture(texture);
     sprite.setPosition(x, y);
 }
